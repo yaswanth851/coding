@@ -1,0 +1,27 @@
+n=int(input())
+TOI=[3,3,3,3,3,5,6]
+Hindu=[2.5,2.5,2.5,2.5,2.5,4,4]
+ET=[4,4,4,4,4,4,10]
+BM=[1.5,1.5,1.5,1.5,1.5,1.5,1.5]
+HT=[2,2,2,2,2,4,4]
+r1=sum(TOI)
+r2=sum(Hindu)
+r3=sum(ET)
+r4=sum(BM)
+r5=sum(HT)
+r=[r1,r2,r3,r4,r5]
+d={r1:"TOI",r2:"Hindu",r3:"ET",r4:"BM",r5:"HT"}
+l={}
+for i,j in d.items():
+    l[j]=i 
+   
+dic={}
+for i in r:
+    for j in r:
+        if(i!=j):
+            if(i+j<n):
+                a=d[i]
+                b=d[j]
+                dic[a]=b
+            
+print(dic)            
